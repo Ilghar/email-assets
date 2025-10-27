@@ -1,0 +1,35 @@
+{
+    "workbench.editor.limit.enabled": false,
+    "workbench.startupEditor": "readme",
+    "workbench.editor.openSideBySideDirection": "right",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.doubleClickTabToToggleEditorWidths": false,
+    "files.autoSave": "onFocusChange",
+    "editor.mouseWheelZoom": false,
+    "workbench.localHistory.enabled": true,
+    "workbench.localHistory.days": 120,
+    "workbench.localHistory.maxFileEntries": 50,
+    "workbench.editor.autoLockGroups": {
+        "default": true,
+        "workbench.editorinputs.searchEditorInput": true,
+        "notebookOutputEditor": true,
+        "jupyter-notebook": true,
+        "repl": true,
+        "workbench.editors.gettingStartedInput": true,
+        "imagePreview.previewEditor": true,
+        "vscode.videoPreview": true,
+        "vscode.audioPreview": true,
+        "jsProfileVisualizer.cpuprofile.table": true,
+        "jsProfileVisualizer.heapsnapshot.table": true,
+        "jsProfileVisualizer.heapprofile.table": true,
+        "workbench.input.interactive": true,
+        "mainThreadWebview-markdown.preview": true
+    },
+    "window.zoomPerWindow": true,
+    "window.zoomLevel": 1,
+    "accessibility.signalOptions.debouncePositionChanges": true,
+    "cSpell.words": [
+        "Anfrage",
+        "preheader"
+    ]
+}

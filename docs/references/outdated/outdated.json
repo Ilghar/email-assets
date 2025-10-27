@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Word 2007 HTML and CSS Rendering in Outlook (archived)",
+    "url": "https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2007/aa338201(v=office.12)?redirectedfrom=MSDN",
+    "tags": ["outlook","legacy","archived"],
+    "notes": "Useful historical reference for Word-based rendering engine in legacy Outlook versions."
+  },
+  {
+    "title": "IE Conditional Comments (archived)",
+    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537512(v%3dvs.85)",
+    "tags": ["ie","legacy","archived"],
+    "notes": "Relevant only for legacy IE; not applicable to modern clients, but kept for context."
+  },
+  {
+    "title": "MSO Style Attributes Reference (community)",
+    "url": "https://stigmortenmyre.no/mso/html/concepts/ofconstyletable.htm",
+    "tags": ["mso","outlook","legacy"],
+    "notes": "Unofficial doc; useful but not maintained—treat as legacy guidance."
+  }
+]

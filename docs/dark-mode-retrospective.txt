@@ -1,0 +1,75 @@
+Dark/Light Template Retrospective and Requirements
+=================================================
+
+1. Problem History
+------------------
+
+• October 26 baseline: `kimi-vs-code-optimized-email-final_2025-10-26.html` was restored after an earlier round of dark-mode patches introduced regressions (panels flickering, Proton duplicating backgrounds, Gmail staying light). This snapshot became the "trusted" reference.  
+• Gradient reintroduction: To keep gradient parity across clients, CSS custom properties were added to the `<body>` and referenced across `.dm-page`, `.dm-outer`, `.contact-panel`, and `.umwelt-panel`. Variables let us reuse long gradient strings without copy/paste.  
+• Proton overlay issue: Proton Mail duplicates selectors with a `#proton-root` prefix; variables there tended to resolve to the light values, causing washed backgrounds. We added explicit overrides in the `#proton-root` block.  
+• Dark-mode toggling failures: Gmail and Proton only toggled to light. We attempted to rely on `@media (prefers-color-scheme: dark)` plus `[data-ogsc]` and `u + .body-root` selectors. Gmail stopped reading the helper block whenever `@media` rules appeared before the `u + .body-root` overrides.  
+• Blend-mode helpers: To force white text in Gmail, `mix-blend-mode` spans (`gmail-blend-difference` / `gmail-screen`) were used. Removing them restored Gmail defaults but made the role row illegible. They were reinstated after testing.  
+• Outlook thick lines: Auxiliary "ruler" tables wrapped around `.contact-panel` and `.umwelt-panel` to simulate borders but introduced heavy seams in Outlook. Removing those tables and relying on border-radius plus gradients resolved the issue.  
+• Variable rollback: Custom properties complicated support because Gmail strips them from inline styles and Proton fallback logic needed separate copies. They were eventually purged from the stylesheet, restoring explicit gradients.  
+• Gmail ordering regression: During cleanup, the dark-mode `@media` block floated ahead of Gmail helpers. Because Gmail stops parsing after hitting `@media`, the `u + .body-root` rules never executed, locking Gmail into light mode. Fix: keep Gmail/Proton helper block ahead of any `@media`.  
+• Proton dark artifacts: Even after inline gradients, Proton desktop kept layering an extra light background behind the `.contact-panel`. The separate `#proton-root` overrides for dark mode were required to reassert the darker gradients.  
+• Body variable remnants: The `<body>` retained `--dm-*` declarations long after custom properties were removed. Those were cleaned to avoid confusion.
+
+2. Attempts, Failures, and Side Effects
+---------------------------------------
+
+• CSS Variables Everywhere → Outcome: Gmail ignored inline custom properties; Proton pulled light defaults, requiring fallback duplicates. Fix: revert to explicit color/gradient declarations.  
+• Remove blend-mode spans → Outcome: Gmail dark text failed to invert; roles became unreadable. Remedy: keep blend-mode spans but only inside Gmail-specific wrappers.  
+• Strip helper tables → Outcome: In Outlook, gradient panels rendered cleaner; but we had to ensure padding and spacer divs preserved spacing. This solved the thick-line complaint.  
+• Proton-only `background` shorthand → Outcome: Proton adopted gradient but lost fallback color. Solution: use both `background-color` and `background-image` for reliability.  
+• `@media` block near the top → Outcome: Gmail refused to evaluate the later `u + .body-root` selectors. Lesson: place all `@media` rules after Gmail/Outlook helper blocks.  
+• Remove Proton overrides entirely → Outcome: Proton fell back to light gradients in dark mode. Conclusion: keep redundant `#proton-root` entries for dark mode.  
+• Replace gradients with flat colors → Outcome: solves toggles but broke brand look-and-feel; decision: restore gradients but manage them explicitly per client.  
+• Eliminating Gmail spacer `<u>` hack → Outcome: Gmail collapsed the required `u + .body-root` context; we reverted to keep dark mode selectors working.  
+• Proton dynamic text colors via `prefers-color-scheme` → Outcome: Proton ignored them when prefixed; we now set text colors directly under `#proton-root` plus `u + .body-root` as needed.
+
+3. Current Known Constraints
+----------------------------
+
+• Gmail: stops parsing CSS after the first `@media`. It demands the `u + .body-root` selector and `[data-ogsc]` overrides appear before any media queries. Inline styles should remain explicit.  
+• Outlook (desktop): requires VML for background gradients; border radius on outer tables must keep `overflow:hidden`. Avoid extra nested tables that create visible seams.  
+• Proton: duplicates selectors with `#proton-root`. Needs both light and dark definitions to prevent fallback to light gradients. Recognizes gradient `background-image` but still uses fallback color for animation.  
+• iOS/macOS: auto-link detection must be neutralized. Already done via `a[x-apple-data-detectors]`.  
+• Android Gmail: removes CSS custom properties and some multiple backgrounds; hence we keep gradient layering minimal for Gmail-specific blocks.  
+• Blend-mode: supported in Gmail web but not Outlook. We scope `mix-blend-mode` spans inside Gmail-specific wrappers so Outlook sees plain text.  
+• Spacer `<u>`: necessary for Gmail to create the `u + .body-root` combinator path.
+
+4. Desired Element Behavior Specification
+-----------------------------------------
+
+Light Mode:
+
+• `.dm-page`: `background-color:#E8E3DE`; gradient `linear-gradient(180deg, rgba(232,227,222,1) 0%, rgba(245,240,235,1) 100%)`. Must fill full width, no seams, responsive.  
+• `.dm-outer`: `background-color:#F7F2EC`; gradient `linear-gradient(180deg, rgba(250,246,241,1) 0%, rgba(237,232,227,1) 100%)`. Keep 20px border radius, overflow hidden, gradient aligned vertical.  
+• `.contact-panel`: `background-color:#DFDAD6`; gradient `linear-gradient(180deg, rgba(225,220,215,0.95) 0%, rgba(240,235,230,0.95) 100%)`. Maintain top radius 16px, bottom square; spacing 12px top/20px sides.  
+• `.umwelt-panel`: `background-color:rgba(240,235,230,0.98)`; gradient `linear-gradient(180deg, rgba(240,235,230,0.98) 0%, rgba(225,220,215,0.98) 100%)`. Bottom radius 16px, top square.  
+• Text colors: `.body-text` `#51585E`; `.bullet-title` `#745A7A`; `.bullet-circle` `#E69CB0`; `.section-title` `#E0A1B5`; `.roles` `#745A7A`; `.role-divider` `#E69CB0`; `.umwelt-p1` `#8F7EA0`; `.umwelt-p2` `#E0A1B5`; `.contact-text` / `.cv-text` `#856A8F`; `.cv-button` background `#F5F0EB`, border `#856A8F`, text `#856A8F`; `.body-emphasis` `#856A8F`; `.body-underline` inherits base color.  
+• Imagery: Light hero image visible, dark image hidden.  
+• Responsive adjustments: At ≤480px `roles` font 11/16, `umwelt` text 10/16, `cv-button` font 10/18; at ≤360px `roles` 10/15, `cv-button` 9/16. Media queries appear at bottom of stylesheet.  
+• Proton light duplication: `#proton-root` duplicates these colors/gradients to ensure Proton enforces them when not in dark mode.
+
+Dark Mode:
+
+• `.dm-page`: `background-color:#4A464F`; gradient `linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%)`.  
+• `.dm-outer`: `background-color:#2E2A31`; layered gradient stack: 
+  - `linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%)` (edge sheen)  
+  - `linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 30%, rgba(255,255,255,0) 100%)` (secondary sheen)  
+  - `linear-gradient(to top, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0) 10%)` (top vignette)  
+  - `linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%)` (base tone)  
+  Background repeat off, size `3px 60%`, `3px 40%`, `100% 8px`, `100% 100%`, positioned left/right vertical stripes plus bottom center for vignette.  
+• `.contact-panel`: `background-color:#2E2A31`; gradient stack: `linear-gradient(to bottom, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 100%)` and `linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%)`; repeat off; size `100% 12px`, `100% 100%`; positions top center, left top.  
+• `.umwelt-panel`: `background-color:#2F2B32`; gradient `linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%)`; opacity 0.77 to soften.  
+• Text colors: `.body-text` / `.bullet-body` `#D4D2D2`; `.bullet-title` `#8F8595`; `.bullet-circle` `#CF9AAE`; `.section-title` `#CF9AAE`; `.roles` `#786F7D`; `.role-divider` `#A87892`; `.umwelt-p1` `#847B93`; `.umwelt-p2` `#6B5A76`; `.contact-text` & links `#9D91A3`; `.cv-text` `#9E9DB0`; `.cv-button` background `#2E2934`, border `#7D6A8C`, text `#7D6A8C`; `.body-emphasis` `#7D6A8C`.  
+• Imagery: Light hero hidden; dark-mode image displayed (currently same asset, but opacity tuned for dark).  
+• Gmail helpers: `u + .body-root` and `[data-ogsc]` selectors mirror the dark-mode colors and gradient stacks. They must reside before `@media`. `gmail-blend-difference` and `gmail-screen` wrappers remain to keep role row bright.  
+• Proton dark duplication: `#proton-root` block repeats dark-mode gradients and colors to force Proton to honor them.  
+• Outlook VML: keep `<v:roundrect>` blocks aligned with dark-mode colors (color values need manual update if base gradients change).  
+• Ordering rule: style flow must be base resets → Proton/Yahoo light fallbacks → base light tokens → Gmail/Proton/Outlook dark overrides → blend helpers → `@media (prefers-color-scheme: dark)` → mobile `@media`.  
+• Responsiveness: media queries only alter typography/button sizing; they should not be allowed to precede Gmail helper blocks.  
+• Accessibility: maintain sufficient contrast (dark text on light backgrounds > 4.5:1; light text on dark > 4.5:1). Blend-mode wrappers must keep actual color definitions for non-supporting clients.
+

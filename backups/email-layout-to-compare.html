@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="supported-color-schemes" content="light dark"/>
+  <title>optimized-email-template</title>
+  <style>
+    * { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+    @media screen and (max-width:480px){
+      .roles{
+        font-size:11px !important;
+        line-height:16px !important;
+        letter-spacing:0.18px !important;
+      }
+      .umwelt-p1,
+      .umwelt-p2{
+        font-size:10px !important;
+        line-height:16px !important;
+      }
+      .cv-button{
+        font-size:10px !important;
+        line-height:18px !important;
+      }
+    }
+
+    @media screen and (max-width:360px){
+      .roles{
+        font-size:10px !important;
+        line-height:15px !important;
+        letter-spacing:0.15px !important;
+      }
+      .cv-button{
+        font-size:9px !important;
+        line-height:16px !important;
+      }
+    }
+
+    /* ===== LIGHT MODE ===== */
+    .dm-page{
+      background:#E8E3DE !important;
+      background-image:linear-gradient(180deg, rgba(232,227,222,1) 0%, rgba(245,240,235,1) 100%) !important;
+    }
+    .dm-outer{
+      background:#F5F0EB !important;
+      background-image:linear-gradient(180deg, rgba(250,246,241,1) 0%, rgba(237,232,227,1) 100%) !important;
+    }
+    .contact-panel{
+      background:rgba(225,220,215,0.95) !important;
+      background-image:linear-gradient(180deg, rgba(225,220,215,0.95) 0%, rgba(240,235,230,0.95) 100%) !important;
+    }
+    .umwelt-panel{
+      background:rgba(240,235,230,0.98) !important;
+      background-image:linear-gradient(180deg, rgba(240,235,230,0.98) 0%, rgba(225,220,215,0.98) 100%) !important;
+    }
+
+    .body-text,
+    .bullet-body{ color:#51585E !important; }
+    .bullet-title{ color:#745A7A !important; }
+    .bullet-circle{ color:#E69CB0 !important; }
+    .section-title{ color:#E0A1B5 !important; }
+    .roles{
+      color:#745A7A !important;
+      white-space:nowrap !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    .role-divider{ color:#E69CB0 !important; font-weight:700 !important; }
+    .umwelt-p1{
+      color:#8F7EA0 !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    .umwelt-p2{
+      color:#E0A1B5 !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    .contact-text,
+    .contact-text a{ color:#856A8F !important; }
+    .cv-text{ color:#856A8F !important; }
+    .cv-button{
+      background-color:#F5F0EB !important;
+      border-color:#856A8F !important;
+      color:#856A8F !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    .body-emphasis{ color:#856A8F !important; font-weight:600 !important; }
+    .body-underline{
+      color:inherit !important;
+      text-decoration:underline !important;
+      text-decoration-color:currentColor !important;
+      text-decoration-thickness:1px !important;
+    }
+
+    /* ===== DARK MODE ===== */
+    @media (prefers-color-scheme: dark){
+      .light-mode-image{ display:none !important; }
+      .dark-mode-image{ display:block !important; }
+      .dm-page{
+        background:#4A464F !important;
+        background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+      }
+      .dm-outer{
+        background:#2E2A31 !important;
+        background-image:
+          linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%),
+          linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 30%, rgba(255,255,255,0) 100%),
+          linear-gradient(to top, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0) 10%),
+          linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+        background-repeat:no-repeat,no-repeat,no-repeat,no-repeat !important;
+        background-size:3px 60%, 3px 40%, 100% 8px, 100% 100% !important;
+        background-position:left 55%, right 40%, bottom center, left top !important;
+      }
+      .contact-panel{
+        background:#2E2A31 !important;
+        background-image:
+          linear-gradient(to bottom, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 100%),
+          linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+        background-repeat:no-repeat,no-repeat !important;
+        background-size:100% 12px, 100% 100% !important;
+        background-position:top center, left top !important;
+      }
+      .umwelt-panel{
+        background:#2F2B32 !important;
+        background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+        opacity:0.77 !important;
+      }
+
+      .body-text,
+      .bullet-body{ color:#D4D2D2 !important; }
+      .bullet-title{ color:#8F8595 !important; }
+      .bullet-circle{ color:#CF9AAE !important; }
+      .section-title{ color:#CF9AAE !important; }
+      .roles{
+        color:#786F7D !important;
+        white-space:nowrap !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .role-divider{ color:#A87892 !important; font-weight:700 !important; }
+      .umwelt-p1{
+        color:#847B93 !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .umwelt-p2{
+        color:#6B5A76 !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .contact-text,
+      .contact-text a{ color:#9D91A3 !important; }
+      .cv-text{ color:#9E9DB0 !important; }
+      .cv-button{
+        background-color:#2E2934 !important;
+        border-color:#7D6A8C !important;
+        color:#7D6A8C !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .body-emphasis{ color:#7D6A8C !important; }
+      .body-underline{
+        color:inherit !important;
+        text-decoration:underline !important;
+        text-decoration-color:currentColor !important;
+        text-decoration-thickness:1px !important;
+      }
+    }
+
+    /* Gmail, Outlook.com dark-mode helpers */
+    [data-ogsc] .dm-page,
+    u + .body-root .dm-page{
+      background:#4A464F !important;
+      background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+    }
+    [data-ogsc] .dm-outer,
+    u + .body-root .dm-outer{
+      background:#2E2A31 !important;
+      background-image:
+        linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%),
+        linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 30%, rgba(255,255,255,0) 100%),
+        linear-gradient(to top, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0) 10%),
+        linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+      background-repeat:no-repeat,no-repeat,no-repeat,no-repeat !important;
+      background-size:3px 60%, 3px 40%, 100% 8px, 100% 100% !important;
+      background-position:left 55%, right 40%, bottom center, left top !important;
+    }
+    [data-ogsc] .contact-panel,
+    u + .body-root .contact-panel{
+      background:#2E2A31 !important;
+      background-image:
+        linear-gradient(to bottom, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 100%),
+        linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+      background-repeat:no-repeat,no-repeat !important;
+      background-size:100% 12px, 100% 100% !important;
+      background-position:top center, left top !important;
+    }
+    [data-ogsc] .umwelt-panel,
+    u + .body-root .umwelt-panel{
+      background:#2F2B32 !important;
+      background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+      opacity:0.77 !important;
+    }
+    [data-ogsc] .body-text,
+    [data-ogsc] .bullet-body,
+    u + .body-root .body-text,
+    u + .body-root .bullet-body{ color:#D4D2D2 !important; }
+    [data-ogsc] .bullet-title,
+    u + .body-root .bullet-title{ color:#8F8595 !important; }
+    [data-ogsc] .bullet-circle,
+    u + .body-root .bullet-circle{ color:#CF9AAE !important; }
+    [data-ogsc] .section-title,
+    u + .body-root .section-title{ color:#CF9AAE !important; }
+    [data-ogsc] .roles,
+    u + .body-root .roles{
+      color:#786F7D !important;
+      white-space:nowrap !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    [data-ogsc] .role-divider,
+    u + .body-root .role-divider{ color:#A87892 !important; font-weight:700 !important; }
+    [data-ogsc] .umwelt-p1,
+    u + .body-root .umwelt-p1{
+      color:#847B93 !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    [data-ogsc] .umwelt-p2,
+    u + .body-root .umwelt-p2{
+      color:#6B5A76 !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    [data-ogsc] .contact-text,
+    [data-ogsc] .contact-text a,
+    u + .body-root .contact-text,
+    u + .body-root .contact-text a{ color:#9D91A3 !important; }
+    [data-ogsc] .cv-text,
+    u + .body-root .cv-text{ color:#9E9DB0 !important; }
+    [data-ogsc] .cv-button,
+    u + .body-root .cv-button{
+      background-color:#2E2934 !important;
+      border-color:#7D6A8C !important;
+      color:#7D6A8C !important;
+      -webkit-text-size-adjust:100% !important;
+      -ms-text-size-adjust:100% !important;
+      text-size-adjust:100% !important;
+    }
+    [data-ogsc] .body-emphasis,
+    u + .body-root .body-emphasis{ color:#7D6A8C !important; }
+    [data-ogsc] .body-underline,
+    u + .body-root .body-underline{
+      color:inherit !important;
+      text-decoration:underline !important;
+      text-decoration-color:currentColor !important;
+      text-decoration-thickness:1px !important;
+    }
+
+    /* Gmail blend-mode helper */
+    u + .body-root .gmail-blend-difference {
+      background:#000;
+      mix-blend-mode:difference;
+    }
+  </style>
+
+  <base target="_blank">
+</head>
+
+<body class="body-root" style="margin:0;padding:0;background:#E8E3DE;">
+  <!-- preheader -->
+  <div style="display:none;font-size:1px;line-height:1px;color:#FAFAFA;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+    Email Title & Subject Preview Text Here
+  </div>
+  <u style="display:none !important;opacity:0 !important;"> </u>
+
+  <!--[if mso]>
+  <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+    <v:fill type="tile" color="#E8E3DE"/>
+  </v:background>
+  <![endif]-->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="dm-page" style="border:0;border-collapse:collapse;margin:0;padding:0;background:#E8E3DE;">
+    <tr>
+      <td align="center" style="padding:28px 12px;">
+        <table role="presentation" width="640" cellpadding="0" cellspacing="0" bgcolor="#F5F0EB" class="outer dm-outer" style="width:640px;max-width:100%;border-collapse:collapse;background:#F5F0EB;border-radius:20px;overflow:hidden;">
+          <tr><td style="padding:0 28px;"><div style="height:28px;line-height:28px;font-size:0;">&nbsp;</div></td></tr>
+          <tr>
+            <td style="padding:0 28px 0 28px;">
+              <div class="light-mode-image">
+                <img src="https://ilghar.github.io/email-assets/headers/cloud-440.png" width="612" alt="Header-Photo-Cloud" style="display:block;width:612px;max-width:612px;height:auto;border:0;border-top-left-radius:18px;border-top-right-radius:18px;overflow:hidden;opacity:0.88;"/>
+              </div>
+              <div class="dark-mode-image" style="display:none;">
+                <img src="https://ilghar.github.io/email-assets/headers/cloud-440.png" width="612" alt="Header-Photo-Cloud" style="display:block;width:612px;max-width:612px;height:auto;border:0;border-top-left-radius:18px;border-top-right-radius:18px;overflow:hidden;opacity:0.88;"/>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 28px 0 28px;">
+              <!-- Section: Greeting -->
+              <div style="font:600 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#AA9EB1;margin:0 0 12px 0;">Sehr geehrte Frau Eliana Salto,</div>
+              <div class="body-text" style="font:400 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;">
+                <p style="margin:0 0 12px 0;">Mein Name ist Ilgar Dadgostari. Ich habe Ihre Kontaktdaten über Frau Rechtsanwältin <i>Mercedes Hervás Megía</i> erhalten, die mich aus Zeitgründen an Sie verwiesen hat. Sie lässt Sie herzlich grüßen.</p>
+                <p style="margin:0 0 12px 0;">Ich wende mich an Sie, da sich meine aktuelle <span class="body-emphasis">Aufenthalts- und Versicherungssituation</span> in Berlin als dringend und komplex gestaltet – ich benötige daher Ihre fachliche Unterstützung.</p>
+                <p style="margin:0 0 12px 0;">Ich habe im April 2024 meinen <b>Masterabschluss</b> an der <i>Kunsthochschule Berlin-Weißensee</i> abgeschlossen und erhielt anschließend ein 18-monatiges <i>Arbeitssuchende-Visum</i>, das am <b>24.10.2025</b> endet.</p>
+                <p style="margin:0 0 12px 0;">In dieser Zeit habe ich intensiv nach einer Arbeitsstelle gesucht und über 200 Bewerbungen verschickt – bislang ohne Erfolg. Inzwischen habe ich meine Unterlagen professioneller überarbeitet und bin überzeugt, dass ich in den kommenden Monaten sehr gute Chancen auf eine Anstellung habe.</p>
+                <p style="margin:0;">Meine <i>bisherige</i> private Versicherung (<span class="body-underline">für ausländische Gäste</span>) endete am 30.09.2025. Eine Verlängerung war wegen der gesetzlichen 5-Jahres-Grenze <span class="body-underline">nicht möglich</span>! Mehrere Versicherungsanbieter meinen, dass ein neuer Vertrag erst mit einer Aufenthaltserlaubnis von mind. 6–18 Monaten möglich sei (Absagen liegen vor).</p>
+                <p style="margin:12px 0 0 0;">Ich befinde mich daher aktuell ohne Versicherungsschutz und weiß nicht, wie ich meinen Antrag auf Verlängerung oder Statusänderung korrekt gestalten soll. Bislang habe ich alle meine Visum-Angelegenheiten selbst erledigt, doch diesmal benötige ich professionelle Begleitung.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:16px 28px 0 28px;font-size:0;line-height:0;">
+              <img src="https://ilghar.github.io/email-assets/signatures/devider-kette-1280-purple.png" width="612" alt="Divider Violet" style="display:block;width:612px;max-width:612px;height:auto;border:0;"/>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:12px 28px 0 28px;">
+              <!-- Section: Highlights -->
+              <div class="section-title" style="font-family:Roboto,Arial,'Segoe UI',Helvetica,sans-serif;font-weight:600;font-size:17px;line-height:24px;color:#745A7A;margin:0 0 6px 0;">Unterstützende Punkte</div>
+              <div class="bullet-container" style="margin-left:-4px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;"><span class="bullet-title"><b>Freiberufliche Tätigkeit:</b></span> Anfrage für kuratorische Tätigkeit + Anfrage als Produkt-Designer:in beim <i>HAW Design-Studio</i></td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;"><span class="bullet-title"><b>Berufliche Weiterbildung:</b></span> <i>AI-Assisted-Analytics</i> (Cyber-Security) — Zertifikate vorhanden</td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;"><span class="bullet-title"><b>Sprachkenntnisse:</b></span> Deutsch <b>C1–C2</b>; zusätzlich Feb. 2025 <b>TOEFL</b> &amp; <b>GRE</b> erfolgreich abgeschlossen</td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;"><span class="bullet-title"><b>Finanzierungsquelle:</b></span> Ersparnisse &amp; Unterstützung meines Bruders (Verpflichtungserklärung möglich)</td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 0 12px;"><span class="bullet-title"><b>Kulturelles Engagement:</b></span> Gemeinnütziges Kollektiv; zwei Musikfestivals in Sachsen (~700 Gäste, ehrenamtlich)</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="body-text" style="font:400 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;"><p style="margin:12px 0 12px 0;">Ich kann Ihnen gerne alle relevanten Unterlagen (<span class="body-underline">Bewerbungsübersicht, Finanzierungsnachweis, Verträge u. a.</span>) zur Verfügung stellen.</p></div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 28px 0 28px;font-size:0;line-height:0;">
+              <img src="https://ilghar.github.io/email-assets/signatures/devider-kette-1280-purple2.png" width="612" alt="Zierlinie · Violett" style="display:block;width:612px;max-width:612px;height:auto;border:0;"/>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:12px 28px 0 28px;">
+              <!-- Section: Questions -->
+              <div class="body-text" style="font:400 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;">
+                <p style="margin:0 0 12px 0;">Ich wäre Ihnen dankbar, wenn Sie mir mitteilen könnten:</p>
+                <div class="bullet-container" style="margin-left:-4px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tr>
+                      <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                      <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;">ob und wie Sie mich vertreten können,</td>
+                    </tr>
+                    <tr>
+                      <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                      <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;">mit welchen ungefähren Kosten ich rechnen sollte und</td>
+                    </tr>
+                    <tr>
+                      <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;">•</td></tr></table></td>
+                      <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 0 12px;">welche weiteren Unterlagen ich vorbereiten soll, um den Antrag zu stärken.</td>
+                    </tr>
+                  </table>
+                </div>
+                <p style="margin:12px 0 0 0;">Für Ihre Zeit und Unterstützung danke ich Ihnen herzlich im Voraus.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px 28px 0 28px;">
+              <div style="font:400 15px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#6B5A76;margin:0 0 20px 0;">Mit freundlichen Grüßen</div>
+              <img src="https://ilghar.github.io/email-assets/signatures/ilghar-signature-600-purple.png" alt="Hand-signature: Ilgar Dadgostari" style="display:block;border:0;width:2.4in;height:auto;margin:0 0 20px 0;opacity:0.88"/>
+              <div class="roles" style="font:500 13px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#745A7A;margin:0 0 16px 0;">
+                <span class="gmail-blend-difference">Product&nbsp;Designer</span>
+                <span class="role-divider" style="color:#E69CB0;font-weight:700;">|</span>
+                <span class="gmail-blend-difference">AI-SOC&nbsp;Analyst</span>
+                <span class="role-divider" style="color:#E69CB0;font-weight:700;">|</span>
+                <span class="gmail-blend-difference">Curator</span>
+                <span class="role-divider" style="color:#E69CB0;font-weight:700;">|</span>
+                <span class="gmail-blend-difference">Sculptor</span>
+                <span class="role-divider" style="color:#E69CB0;font-weight:700;">|</span>
+                <span class="gmail-blend-difference">Spatial&nbsp;Strategist</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 28px 0 28px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="panel contact-panel" style="border-collapse:collapse;background:rgba(225,220,215,0.95);border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:0;border-bottom-right-radius:0;overflow:hidden;">
+                <tr>
+                  <td style="padding:12px 20px 0 20px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                      <tr>
+                        <td class="contact-text" style="font:400 13px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F;padding:0 20px 0 0;white-space:nowrap;vertical-align:baseline;">
+                          <img src="https://ilghar.github.io/email-assets/icons/phone-number-64.png" width="18" height="18" alt="Telefon" style="display:inline-block;border:0;vertical-align:-5px;margin-right:8px;"/>
+                          <a href="tel:+4915226996367" style="text-decoration:none;color:#856A8F !important;">+49 (0)1522 699 63 67</a>
+                        </td>
+                        <td class="contact-text" style="font:400 13px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F;padding:0 20px 0 12px;white-space:nowrap;vertical-align:baseline;">
+                          <img src="https://ilghar.github.io/email-assets/icons/location-pin-40.png" width="12" height="18" alt="Based in" style="display:inline-block;border:0;vertical-align:-4px;margin-right:8px;"/>
+                          Berlin
+                        </td>
+                        <td width="100%" style="padding:0;margin:0;font-size:0;line-height:0;"> </td>
+                        <td align="right" style="padding:0 0 0 20px;white-space:nowrap;text-align:right;vertical-align:baseline;">
+                          <span style="display:inline-block;white-space:nowrap;font-size:0;line-height:0;vertical-align:baseline;">
+                            <span class="cv-text" style="display:inline-block;height:20px;line-height:20px;vertical-align:baseline;font:400 14px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F;">
+                              Download&ensp;<span style="font-weight:500;font-size:15px;line-height:20px;">CV</span>
+                            </span>
+                            <span style="display:inline-block;width:12px;height:20px;vertical-align:middle;">&#8203;</span>
+                            <a href="https://ilghar.github.io/email-assets/CV/Ilghar-Dadgostari_CV-DE.pdf" class="cv-button" style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;text-decoration:none;vertical-align:+1.4px;font:520 11.4px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F !important;border:1.4px solid #856A8F;border-radius:6px;background:#F5F0EB;">DE</a>
+                            <span style="display:inline-block;width:12px;height:20px;vertical-align:baseline;">&#8203;</span>
+                            <a href="https://ilghar.github.io/email-assets/CV/Ilghar-Dadgostari_CV-EN.pdf" class="cv-button" style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;text-decoration:none;vertical-align:+1.4px;font:520 11.4px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F !important;border:1.4px solid #856A8F;border-radius:6px;background:#F5F0EB;">EN</a>
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="padding:0 20px;"><div style="height:60px;line-height:60px;font-size:0;"> </div></td></tr>
+                <tr>
+                  <td align="center" style="padding:0 20px 20px 20px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 auto;">
+                      <tr>
+                        <td style="padding:0 36px 0 0;"><a href="https://www.linkedin.com/in/ilqardesign/"><img src="https://ilghar.github.io/email-assets/icons/linkedin-96.png" width="20" height="20" alt="LinkedIn" style="display:block;border:0;"/></a></td>
+                        <td style="padding:0 36px 0 0;"><a href="https://vimeo.com/user71975820"><img src="https://ilghar.github.io/email-assets/icons/vimeo-96.png" width="20" height="20" alt="Vimeo" style="display:block;border:0;"/></a></td>
+                        <td style="padding:0 36px 0 0;"><a href="https://www.instagram.com/cypselae_vayu/"><img src="https://ilghar.github.io/email-assets/icons/instagram-96.png" width="20" height="20" alt="Instagram" style="display:block;border:0;"/></a></td>
+                        <td style="padding:0 36px 0 0;"><a href="https://wa.me/+41799027733"><img src="https://ilghar.github.io/email-assets/icons/whatsapp-96.png" width="20" height="20" alt="WhatsApp" style="display:block;border:0;"/></a></td>
+                        <td><a href="https://t.me/oiliooil"><img src="https://ilghar.github.io/email-assets/icons/telegram-96.png" width="20" height="20" alt="Telegram" style="display:block;border:0;"/></a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td style="padding:0 24px;"><div style="height:24px;line-height:24px;font-size:0;">&nbsp;</div></td></tr>
+          <tr>
+            <td style="padding:0 28px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="panel umwelt-panel" style="border-collapse:collapse;background:rgba(240,235,230,0.98);border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:16px;border-bottom-right-radius:16px;overflow:hidden;">
+                <tr>
+                  <td style="padding:16px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                      <tr>
+                        <td valign="middle" style="padding:0;"><img src="https://ilghar.github.io/email-assets/footers/nature-note-288.png" alt="Bamboo Trees" style="display:block;border:0;width:72px;max-width:72px;height:auto;"/></td>
+                        <td valign="middle" style="padding:0 0 0 20px;">
+                          <div class="umwelt-p1" style="font-family:Roboto,Arial,'Segoe UI',Helvetica,sans-serif;font-weight:200;font-size:11px;line-height:18px;color:#8F7EA0;margin:0 0 12px 0;">The contents of this email and any attachments are confidential, and intended for the named recipient(s) only. If you have received this email by mistake, please avoid disclosing the contents to others or make copies thereof.</div>
+                          <div class="umwelt-p2" style="font-family:Roboto,Arial,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:11px;line-height:18px;color:#E0A1B5;margin:8px 0 0 0;">Please consider the environment before printing this email.</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td style="padding:0 28px;"><div style="height:28px;line-height:28px;font-size:0;">&nbsp;</div></td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

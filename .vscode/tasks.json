@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open Compare (Backup vs Blank)",
+      "type": "shell",
+      "command": "open",
+      "args": [
+        "${workspaceFolder}/tools/compare.html?a=../backups/kimi-vs-code-optimized-email-final_2025-10-26.html&b=../backups/email-layout-to-compare.html"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Compare (Custom)",
+      "type": "shell",
+      "command": "open",
+      "args": [
+        "${workspaceFolder}/tools/compare.html"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
