@@ -1,0 +1,12 @@
+# Prevent Git from changing line endings or treating files as binary
+* text=auto
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# Disable Git LFS and other potential locks
+*.html -filter -clean -smudge
+*.js -filter -clean -smudge
+*.json -filter -clean -smudge

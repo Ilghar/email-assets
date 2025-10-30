@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="supported-color-schemes" content="light dark"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no"/>
+  <meta name="referrer" content="no-referrer"/>
+  <title>optimized-email-template-kimi-final</title>
+  <style>
+      /* Link normalization */
+      a, a:link, a:visited, a:hover, a:active, a:focus{
+        color:inherit !important;
+        text-decoration-color:currentColor !important;
+        text-decoration-thickness:1px !important;
+      }
+      /* Outlook.com normalization */
+      .ExternalClass { width:100%; }
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height:100%; }
+      /* Outlook table spacing reset */
+      table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+      /* iOS/macOS auto-linking */
+      a[x-apple-data-detectors],
+      .x-apple-data-detectors,
+      a[x-apple-data-detectors-type],
+      .unstyle-auto-detected-links a{
+        color:inherit !important;
+        text-decoration:none !important;
+        font:inherit !important;
+      }
+      /* Android/Gmail heuristic links */
+      a[href^="tel"],
+      a[href^="sms"],
+      a[href^="mailto"]{
+        color:inherit !important;
+        text-decoration:underline !important;
+      }
+
+      :root{
+        color-scheme:light dark;
+        supported-color-schemes:light dark;
+      }
+      *{
+        -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+        text-size-adjust:100%;
+      }
+      .light-mode-image{ display:block !important; }
+      .dark-mode-image{ display:none !important; }
+
+      /* ===== LIGHT MODE ===== */
+      .dm-page{
+        background-color:#E8E3DE !important;
+        background-color:rgba(232,227,222,1) !important;
+        background-image:linear-gradient(180deg, rgba(232,227,222,1) 0%, rgba(245,240,235,1) 100%) !important;
+      }
+      .dm-outer{
+        background-color:#F7F2EC !important;
+        background-color:rgba(247,242,236,1) !important;
+        background-image:linear-gradient(180deg, rgba(250,246,241,1) 0%, rgba(237,232,227,1) 100%) !important;
+        border-radius:20px !important;
+        overflow:hidden !important;
+      }
+      .contact-panel{
+        background-color:#D8D4CF !important;
+        background-color:rgba(216,212,207,1) !important;
+        background-image:linear-gradient(180deg, rgba(225,220,215,1) 0%, rgba(240,235,230,1) 100%) !important;
+      }
+      .umwelt-panel{
+        background-color:#F0EBE6 !important;
+        background-color:rgba(240,235,230,0.98) !important;
+        background-image:linear-gradient(180deg, rgba(240,235,230,0.98) 0%, rgba(225,220,215,0.98) 100%) !important;
+      }
+
+      .body-text,
+      .bullet-body{
+        color:#51585E !important;
+        color:rgba(81,88,94,1) !important;
+      }
+      .bullet-title{
+        color:#745A7A !important;
+        color:rgba(116,90,122,1) !important;
+      }
+      .bullet-circle{
+        color:#E69CB0 !important;
+        color:rgba(230,156,176,1) !important;
+      }
+      .section-title{
+        color:#E0A1B5 !important;
+        color:rgba(224,161,181,1) !important;
+      }
+      .roles{
+        color:#745A7A !important;
+        color:rgba(116,90,122,1) !important;
+        white-space:nowrap !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .role-divider{
+        color:#E69CB0 !important;
+        color:rgba(230,156,176,1) !important;
+        font-weight:700 !important;
+      }
+      .umwelt-p1{
+        color:#8F7EA0 !important;
+        color:rgba(143,126,160,1) !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .umwelt-p2{
+        color:#E0A1B5 !important;
+        color:rgba(224,161,181,1) !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .contact-text,
+      .contact-text a{
+        color:#856A8F !important;
+        color:rgba(133,106,143,1) !important;
+      }
+      .contact-phone{
+        color:#856A8F !important;
+        color:rgba(133,106,143,1) !important;
+      }
+      .cv-text{
+        color:#856A8F !important;
+        color:rgba(133,106,143,1) !important;
+      }
+      .cv-button{
+        background-color:#F5F0EB !important;
+        background-color:rgba(245,240,235,1) !important;
+        border:1.4px solid #856A8F !important;
+        border-color:rgba(133,106,143,1) !important;
+        color:#856A8F !important;
+        color:rgba(133,106,143,1) !important;
+        border-radius:6px !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      .body-emphasis{
+        color:#856A8F !important;
+        color:rgba(133,106,143,1) !important;
+        font-weight:600 !important;
+      }
+      .body-underline{
+        color:inherit !important;
+        text-decoration:underline !important;
+        text-decoration-color:currentColor !important;
+        text-decoration-thickness:1px !important;
+      }
+
+  </style>
+
+   <style>
+
+      /* Proton light-mode duplication */
+     #proton-root .light-mode-image{ display:block !important; }
+      #proton-root .dark-mode-image{ display:none !important; }
+      #proton-root .dm-page{
+        background-color:#E8E3DE !important;
+        background-color:rgba(232,227,222,1) !important;
+        background-image:linear-gradient(180deg, rgba(232,227,222,1) 0%, rgba(245,240,235,1) 100%) !important;
+      }
+      #proton-root .dm-outer{
+        background-color:#F7F2EC !important;
+        background-color:rgba(247,242,236,1) !important;
+        background-image:linear-gradient(180deg, rgba(250,246,241,1) 0%, rgba(237,232,227,1) 100%) !important;
+      }
+      #proton-root .contact-panel{
+        background-color:#D8D4CF !important;
+        background-color:rgba(216,212,207,1) !important;
+        background-image:linear-gradient(180deg, rgba(225,220,215,1) 0%, rgba(240,235,230,1) 100%) !important;
+      }
+      #proton-root .umwelt-panel{
+        background-color:#F0EBE6 !important;
+        background-color:rgba(240,235,230,0.98) !important;
+        background-image:linear-gradient(180deg, rgba(240,235,230,0.98) 0%, rgba(225,220,215,0.98) 100%) !important;
+      }
+
+      /* Yahoo light-mode duplication */
+      body[yahoo] .dm-page{
+        background-color:#E8E3DE !important;
+        background-color:rgba(232,227,222,1) !important;
+        background-image:linear-gradient(180deg, rgba(232,227,222,1) 0%, rgba(245,240,235,1) 100%) !important;
+      }
+      body[yahoo] .dm-outer{
+        background-color:#F7F2EC !important;
+        background-color:rgba(247,242,236,1) !important;
+        background-image:linear-gradient(180deg, rgba(250,246,241,1) 0%, rgba(237,232,227,1) 100%) !important;
+      }
+      body[yahoo] .contact-panel{
+        background-color:#D8D4CF !important;
+        background-color:rgba(216,212,207,1) !important;
+        background-image:linear-gradient(180deg, rgba(225,220,215,1) 0%, rgba(240,235,230,1) 100%) !important;
+      }
+      body[yahoo] .umwelt-panel{
+        background-color:#F0EBE6 !important;
+        background-color:rgba(240,235,230,0.98) !important;
+        background-image:linear-gradient(180deg, rgba(240,235,230,0.98) 0%, rgba(225,220,215,0.98) 100%) !important;
+      }
+
+  </style>
+ 
+  <style>
+
+      /* Yahoo dark-mode helpers */
+      body[yahoo][data-ogsc] .light-mode-image{ display:none !important; }
+      body[yahoo][data-ogsc] .dark-mode-image{ display:block !important; }
+      body[yahoo][data-ogsc] .dm-page{
+        background-color:#4A464F !important;
+        background-color:rgba(74,70,79,1) !important;
+        background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+      }
+      body[yahoo][data-ogsc] .dm-outer{
+        background-color:#2E2A31 !important;
+        background-color:rgba(46,42,49,1) !important;
+        background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+        background-repeat:no-repeat !important;
+      }
+      body[yahoo][data-ogsc] .contact-panel{
+        background-color:#2E2A31 !important;
+        background-color:rgba(46,42,49,1) !important;
+        background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+        background-repeat:no-repeat !important;
+      }
+      body[yahoo][data-ogsc] .umwelt-panel{
+        background-color:#2F2B32 !important;
+        background-color:rgba(47,43,50,1) !important;
+        background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+        opacity:0.77 !important;
+      }
+
+  </style>
+
+ <style>
+ 
+      @media screen and (max-width:600px){
+        /* Gmail dark-mode helpers */
+        body[data-ogsc] .light-mode-image,
+        body[data-ogsb] .light-mode-image{ display:none !important; }
+        body[data-ogsc] .dark-mode-image,
+        body[data-ogsb] .dark-mode-image{ display:block !important; }
+        body[data-ogsc] .dm-page,
+        body[data-ogsb] .dm-page{
+          background-color:#4A464F !important;
+          background-color:rgba(74,70,79,1) !important;
+          background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+          background:#4A464F linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+        }
+        body[data-ogsc] .dm-outer,
+        body[data-ogsb] .dm-outer{
+          background-color:#2E2A31 !important;
+          background-color:rgba(46,42,49,1) !important;
+          background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+          background-repeat:no-repeat !important;
+        }
+        body[data-ogsc] .contact-panel,
+        body[data-ogsb] .contact-panel{
+          background-color:#2E2A31 !important;
+          background-color:rgba(46,42,49,1) !important;
+          background:#2E2A31 !important;
+          background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+          background-repeat:no-repeat !important;
+        }
+        body[data-ogsc] .umwelt-panel,
+        body[data-ogsb] .umwelt-panel{
+          background-color:#2F2B32 !important;
+          background-color:rgba(47,43,50,1) !important;
+          background:#2F2B32 !important;
+          background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+          opacity:0.77 !important;
+        }
+        body[data-ogsc] .body-text,
+        body[data-ogsb] .body-text,
+        body[data-ogsc] .bullet-body,
+        body[data-ogsb] .bullet-body{
+          color:#D4D2D2 !important;
+          color:rgba(212,210,210,1) !important;
+        }
+        body[data-ogsc] .body-text p,
+        body[data-ogsb] .body-text p{
+          color:#D4D2D2 !important;
+          color:rgba(212,210,210,1) !important;
+        }
+        body[data-ogsc] .bullet-title,
+        body[data-ogsb] .bullet-title{
+          color:#8F8595 !important;
+          color:rgba(143,133,149,1) !important;
+        }
+        body[data-ogsc] .bullet-circle,
+        body[data-ogsb] .bullet-circle{
+          color:#CF9AAE !important;
+          color:rgba(207,154,174,1) !important;
+        }
+        body[data-ogsc] .section-title,
+        body[data-ogsb] .section-title{
+          color:#CF9AAE !important;
+          color:rgba(207,154,174,1) !important;
+        }
+        body[data-ogsc] .roles,
+        body[data-ogsb] .roles{
+          color:#786F7D !important;
+          color:rgba(120,111,125,1) !important;
+          white-space:nowrap !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        body[data-ogsc] .role-divider,
+        body[data-ogsb] .role-divider{
+          color:#A87892 !important;
+          color:rgba(168,120,146,1) !important;
+          font-weight:700 !important;
+        }
+        body[data-ogsc] .umwelt-p1,
+        body[data-ogsb] .umwelt-p1{
+          color:#847B93 !important;
+          color:rgba(132,123,147,1) !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        body[data-ogsc] .umwelt-p2,
+        body[data-ogsb] .umwelt-p2{
+          color:#6B5A76 !important;
+          color:rgba(107,90,118,1) !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        body[data-ogsc] .contact-text,
+        body[data-ogsb] .contact-text,
+        body[data-ogsc] .contact-text a,
+        body[data-ogsb] .contact-text a,
+        body[data-ogsc] .contact-phone,
+        body[data-ogsb] .contact-phone{
+          color:#9D91A3 !important;
+          color:rgba(157,145,163,1) !important;
+        }
+        body[data-ogsc] .cv-text,
+        body[data-ogsb] .cv-text{
+          color:#9E9DB0 !important;
+          color:rgba(158,157,176,1) !important;
+        }
+        body[data-ogsc] .cv-button,
+        body[data-ogsb] .cv-button{
+          background-color:#2E2934 !important;
+          background-color:rgba(46,41,52,1) !important;
+          border-color:#7D6A8C !important;
+          border-color:rgba(125,106,140,1) !important;
+          color:#7D6A8C !important;
+          color:rgba(125,106,140,1) !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        body[data-ogsc] .body-emphasis,
+        body[data-ogsb] .body-emphasis{
+          color:#7D6A8C !important;
+          color:rgba(125,106,140,1) !important;
+        }
+        body[data-ogsc] .body-underline,
+        body[data-ogsb] .body-underline{
+          color:inherit !important;
+          text-decoration:underline !important;
+          text-decoration-color:currentColor !important;
+          text-decoration-thickness:1px !important;
+        }
+      }
+
+  </style>
+
+  <style>
+
+      /* Proton dark-mode helpers */
+      body[data-protonmail-theme="dark"],
+      body[class*="protonmail"][data-theme="dark"],
+      body[class*="protonmail"][class*="dark"],
+      #proton-root[data-theme="dark"],
+      #proton-root[data-ogsc="dark"],
+      #proton-root .theme-dark,
+      #proton-root .dark-theme{
+        background-color:#211E26 !important;
+        background-color:rgba(33,30,38,1) !important;
+        background-image:none !important;
+      }
+      body[data-protonmail-theme="dark"] .light-mode-image,
+      body[class*="protonmail"][data-theme="dark"] .light-mode-image,
+      body[class*="protonmail"][class*="dark"] .light-mode-image,
+      #proton-root[data-theme="dark"] .light-mode-image,
+      #proton-root[data-ogsc="dark"] .light-mode-image,
+      #proton-root .theme-dark .light-mode-image,
+      #proton-root .dark-theme .light-mode-image{ display:none !important; }
+      body[data-protonmail-theme="dark"] .dark-mode-image,
+      body[class*="protonmail"][data-theme="dark"] .dark-mode-image,
+      body[class*="protonmail"][class*="dark"] .dark-mode-image,
+      #proton-root[data-theme="dark"] .dark-mode-image,
+      #proton-root[data-ogsc="dark"] .dark-mode-image,
+      #proton-root .theme-dark .dark-mode-image,
+      #proton-root .dark-theme .dark-mode-image{ display:block !important; }
+
+      body[data-protonmail-theme="dark"] .dm-page,
+      body[class*="protonmail"][data-theme="dark"] .dm-page,
+      body[class*="protonmail"][class*="dark"] .dm-page{
+        background-color:#4A464F !important;
+        background-color:rgba(74,70,79,1) !important;
+        background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+        background:#4A464F linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+      }
+      #proton-root[data-theme="dark"] .dm-page,
+      #proton-root[data-ogsc="dark"] .dm-page,
+      #proton-root .theme-dark .dm-page,
+      #proton-root .dark-theme .dm-page{
+        background-color:#4A464F !important;
+        background-color:rgba(74,70,79,1) !important;
+        background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+        background:#4A464F linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+      }
+
+      body[data-protonmail-theme="dark"] .dm-outer,
+      body[class*="protonmail"][data-theme="dark"] .dm-outer,
+      body[class*="protonmail"][class*="dark"] .dm-outer{
+        background-color:#2E2A31 !important;
+        background-color:rgba(46,42,49,1) !important;
+        background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+        background-repeat:no-repeat !important;
+      }
+      #proton-root[data-theme="dark"] .dm-outer,
+      #proton-root[data-ogsc="dark"] .dm-outer,
+      #proton-root .theme-dark .dm-outer,
+      #proton-root .dark-theme .dm-outer{
+        background-color:#2E2A31 !important;
+        background-color:rgba(46,42,49,1) !important;
+        background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+        background-repeat:no-repeat !important;
+      }
+
+      body[data-protonmail-theme="dark"] .contact-panel,
+      body[class*="protonmail"][data-theme="dark"] .contact-panel,
+      body[class*="protonmail"][class*="dark"] .contact-panel{
+        background-color:#2E2A31 !important;
+        background-color:rgba(46,42,49,1) !important;
+        background:#2E2A31 !important;
+        background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+        background-repeat:no-repeat !important;
+      }
+      #proton-root[data-theme="dark"] .contact-panel,
+      #proton-root[data-ogsc="dark"] .contact-panel,
+      #proton-root .theme-dark .contact-panel,
+      #proton-root .dark-theme .contact-panel{
+        background-color:#2E2A31 !important;
+        background-color:rgba(46,42,49,1) !important;
+        background:#2E2A31 !important;
+        background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+        background-repeat:no-repeat !important;
+      }
+
+      body[data-protonmail-theme="dark"] .umwelt-panel,
+      body[class*="protonmail"][data-theme="dark"] .umwelt-panel,
+      body[class*="protonmail"][class*="dark"] .umwelt-panel{
+        background-color:#2F2B32 !important;
+        background-color:rgba(47,43,50,1) !important;
+        background:#2F2B32 !important;
+        background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+        opacity:0.77 !important;
+      }
+      #proton-root[data-theme="dark"] .umwelt-panel,
+      #proton-root[data-ogsc="dark"] .umwelt-panel,
+      #proton-root .theme-dark .umwelt-panel,
+      #proton-root .dark-theme .umwelt-panel{
+        background-color:#2F2B32 !important;
+        background-color:rgba(47,43,50,1) !important;
+        background:#2F2B32 !important;
+        background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+        opacity:0.77 !important;
+      }
+
+  </style>
+
+  <style>
+
+      body[data-protonmail-theme="dark"] .body-text,
+      body[data-protonmail-theme="dark"] .bullet-body,
+      body[class*="protonmail"][data-theme="dark"] .body-text,
+      body[class*="protonmail"][data-theme="dark"] .bullet-body,
+      body[class*="protonmail"][class*="dark"] .body-text,
+      body[class*="protonmail"][class*="dark"] .bullet-body,
+      #proton-root[data-theme="dark"] .body-text,
+      #proton-root[data-theme="dark"] .bullet-body,
+      #proton-root[data-ogsc="dark"] .body-text,
+      #proton-root[data-ogsc="dark"] .bullet-body,
+      #proton-root .theme-dark .body-text,
+      #proton-root .theme-dark .bullet-body,
+      #proton-root .dark-theme .body-text,
+      #proton-root .dark-theme .bullet-body{
+        color:#D4D2D2 !important;
+        color:rgba(212,210,210,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .bullet-title,
+      body[class*="protonmail"][data-theme="dark"] .bullet-title,
+      body[class*="protonmail"][class*="dark"] .bullet-title,
+      #proton-root[data-theme="dark"] .bullet-title,
+      #proton-root[data-ogsc="dark"] .bullet-title,
+      #proton-root .theme-dark .bullet-title,
+      #proton-root .dark-theme .bullet-title{
+        color:#8F8595 !important;
+        color:rgba(143,133,149,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .bullet-circle,
+      body[class*="protonmail"][data-theme="dark"] .bullet-circle,
+      body[class*="protonmail"][class*="dark"] .bullet-circle,
+      #proton-root[data-theme="dark"] .bullet-circle,
+      #proton-root[data-ogsc="dark"] .bullet-circle,
+      #proton-root .theme-dark .bullet-circle,
+      #proton-root .dark-theme .bullet-circle{
+        color:#CF9AAE !important;
+        color:rgba(207,154,174,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .section-title,
+      body[class*="protonmail"][data-theme="dark"] .section-title,
+      body[class*="protonmail"][class*="dark"] .section-title,
+      #proton-root[data-theme="dark"] .section-title,
+      #proton-root[data-ogsc="dark"] .section-title,
+      #proton-root .theme-dark .section-title,
+      #proton-root .dark-theme .section-title{
+        color:#CF9AAE !important;
+        color:rgba(207,154,174,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .roles,
+      body[class*="protonmail"][data-theme="dark"] .roles,
+      body[class*="protonmail"][class*="dark"] .roles,
+      #proton-root[data-theme="dark"] .roles,
+      #proton-root[data-ogsc="dark"] .roles,
+      #proton-root .theme-dark .roles,
+      #proton-root .dark-theme .roles{
+        color:#786F7D !important;
+        color:rgba(120,111,125,1) !important;
+        white-space:nowrap !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      body[data-protonmail-theme="dark"] .role-divider,
+      body[class*="protonmail"][data-theme="dark"] .role-divider,
+      body[class*="protonmail"][class*="dark"] .role-divider,
+      #proton-root[data-theme="dark"] .role-divider,
+      #proton-root[data-ogsc="dark"] .role-divider,
+      #proton-root .theme-dark .role-divider,
+      #proton-root .dark-theme .role-divider{
+        color:#A87892 !important;
+        color:rgba(168,120,146,1) !important;
+        font-weight:700 !important;
+      }
+      body[data-protonmail-theme="dark"] .umwelt-p1,
+      body[class*="protonmail"][data-theme="dark"] .umwelt-p1,
+      body[class*="protonmail"][class*="dark"] .umwelt-p1,
+      #proton-root[data-theme="dark"] .umwelt-p1,
+      #proton-root[data-ogsc="dark"] .umwelt-p1,
+      #proton-root .theme-dark .umwelt-p1,
+      #proton-root .dark-theme .umwelt-p1{
+        color:#847B93 !important;
+        color:rgba(132,123,147,1) !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      body[data-protonmail-theme="dark"] .umwelt-p2,
+      body[class*="protonmail"][data-theme="dark"] .umwelt-p2,
+      body[class*="protonmail"][class*="dark"] .umwelt-p2,
+      #proton-root[data-theme="dark"] .umwelt-p2,
+      #proton-root[data-ogsc="dark"] .umwelt-p2,
+      #proton-root .theme-dark .umwelt-p2,
+      #proton-root .dark-theme .umwelt-p2{
+        color:#6B5A76 !important;
+        color:rgba(107,90,118,1) !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      body[data-protonmail-theme="dark"] .contact-text,
+      body[data-protonmail-theme="dark"] .contact-text a,
+      body[data-protonmail-theme="dark"] .contact-phone,
+      body[class*="protonmail"][data-theme="dark"] .contact-text,
+      body[class*="protonmail"][data-theme="dark"] .contact-text a,
+      body[class*="protonmail"][data-theme="dark"] .contact-phone,
+      body[class*="protonmail"][class*="dark"] .contact-text,
+      body[class*="protonmail"][class*="dark"] .contact-text a,
+      body[class*="protonmail"][class*="dark"] .contact-phone,
+      #proton-root[data-theme="dark"] .contact-text,
+      #proton-root[data-theme="dark"] .contact-text a,
+      #proton-root[data-theme="dark"] .contact-phone,
+      #proton-root[data-ogsc="dark"] .contact-text,
+      #proton-root[data-ogsc="dark"] .contact-text a,
+      #proton-root[data-ogsc="dark"] .contact-phone,
+      #proton-root .theme-dark .contact-text,
+      #proton-root .theme-dark .contact-text a,
+      #proton-root .theme-dark .contact-phone,
+      #proton-root .dark-theme .contact-text,
+      #proton-root .dark-theme .contact-text a,
+      #proton-root .dark-theme .contact-phone{
+        color:#9D91A3 !important;
+        color:rgba(157,145,163,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .cv-text,
+      body[class*="protonmail"][data-theme="dark"] .cv-text,
+      body[class*="protonmail"][class*="dark"] .cv-text,
+      #proton-root[data-theme="dark"] .cv-text,
+      #proton-root[data-ogsc="dark"] .cv-text,
+      #proton-root .theme-dark .cv-text,
+      #proton-root .dark-theme .cv-text{
+        color:#9E9DB0 !important;
+        color:rgba(158,157,176,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .cv-button,
+      body[class*="protonmail"][data-theme="dark"] .cv-button,
+      body[class*="protonmail"][class*="dark"] .cv-button,
+      #proton-root[data-theme="dark"] .cv-button,
+      #proton-root[data-ogsc="dark"] .cv-button,
+      #proton-root .theme-dark .cv-button,
+      #proton-root .dark-theme .cv-button{
+        background-color:#2E2934 !important;
+        background-color:rgba(46,41,52,1) !important;
+        border-color:#7D6A8C !important;
+        border-color:rgba(125,106,140,1) !important;
+        color:#7D6A8C !important;
+        color:rgba(125,106,140,1) !important;
+        -webkit-text-size-adjust:100% !important;
+        -ms-text-size-adjust:100% !important;
+        text-size-adjust:100% !important;
+      }
+      body[data-protonmail-theme="dark"] .body-emphasis,
+      body[class*="protonmail"][data-theme="dark"] .body-emphasis,
+      body[class*="protonmail"][class*="dark"] .body-emphasis,
+      #proton-root[data-theme="dark"] .body-emphasis,
+      #proton-root[data-ogsc="dark"] .body-emphasis,
+      #proton-root .theme-dark .body-emphasis,
+      #proton-root .dark-theme .body-emphasis{
+        color:#7D6A8C !important;
+        color:rgba(125,106,140,1) !important;
+      }
+      body[data-protonmail-theme="dark"] .body-underline,
+      body[class*="protonmail"][data-theme="dark"] .body-underline,
+      body[class*="protonmail"][class*="dark"] .body-underline,
+      #proton-root[data-theme="dark"] .body-underline,
+      #proton-root[data-ogsc="dark"] .body-underline,
+      #proton-root .theme-dark .body-underline,
+      #proton-root .dark-theme .body-underline{
+        color:inherit !important;
+        text-decoration:underline !important;
+        text-decoration-color:currentColor !important;
+        text-decoration-thickness:1px !important;
+      }
+
+  </style>
+
+  <style>
+
+      /* ===== DARK MODE ===== */
+      @media (prefers-color-scheme: dark){
+        .light-mode-image{ display:none !important; }
+        .dark-mode-image{ display:block !important; }
+        body,
+        .body-root{
+          background-color:#211E26 !important;
+          background-image:none !important;
+        }
+        .dm-page{
+          background-color:#4A464F !important;
+          background-color:rgba(74,70,79,1) !important;
+          background-image:linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+          background:#4A464F linear-gradient(180deg, rgba(88,84,93,1) 0%, rgba(55,51,57,1) 100%) !important;
+        }
+        .dm-outer{
+          background-color:#2E2A31 !important;
+          background-color:rgba(46,42,49,1) !important;
+          background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 100%) !important;
+          background-repeat:no-repeat !important;
+        }
+        .contact-panel{
+          background-color:#2E2A31 !important;
+          background-color:rgba(46,42,49,1) !important;
+          background-image:linear-gradient(180deg, rgba(51,48,55,1) 0%, rgba(33,29,35,1) 70%) !important;
+          background-repeat:no-repeat !important;
+        }
+        .umwelt-panel{
+          background-color:#2F2B32 !important;
+          background-color:rgba(47,43,50,1) !important;
+          background-image:linear-gradient(180deg, rgba(33,29,35,1) 0%, rgba(33,29,35,1) 44%, rgba(52,43,59,1) 100%) !important;
+          opacity:0.77 !important;
+        }
+
+        .body-text,
+        .bullet-body{
+          color:#D4D2D2 !important;
+          color:rgba(212,210,210,1) !important;
+        }
+        .bullet-title{
+          color:#8F8595 !important;
+          color:rgba(143,133,149,1) !important;
+        }
+        .bullet-circle{
+          color:#CF9AAE !important;
+          color:rgba(207,154,174,1) !important;
+        }
+        .section-title{
+          color:#CF9AAE !important;
+          color:rgba(207,154,174,1) !important;
+        }
+        .roles{
+          color:#786F7D !important;
+          color:rgba(120,111,125,1) !important;
+          white-space:nowrap !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        .role-divider{
+          color:#A87892 !important;
+          color:rgba(168,120,146,1) !important;
+          font-weight:700 !important;
+        }
+        .umwelt-p1{
+          color:#847B93 !important;
+          color:rgba(132,123,147,1) !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        .umwelt-p2{
+          color:#6B5A76 !important;
+          color:rgba(107,90,118,1) !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        .contact-text,
+        .contact-text a,
+        .contact-phone{
+          color:#9D91A3 !important;
+          color:rgba(157,145,163,1) !important;
+        }
+        .cv-text{
+          color:#9E9DB0 !important;
+          color:rgba(158,157,176,1) !important;
+        }
+        .cv-button{
+          background-color:#2E2934 !important;
+          background-color:rgba(46,41,52,1) !important;
+          border-color:#7D6A8C !important;
+          border-color:rgba(125,106,140,1) !important;
+          color:#7D6A8C !important;
+          color:rgba(125,106,140,1) !important;
+          -webkit-text-size-adjust:100% !important;
+          -ms-text-size-adjust:100% !important;
+          text-size-adjust:100% !important;
+        }
+        .body-emphasis{
+          color:#7D6A8C !important;
+          color:rgba(125,106,140,1) !important;
+        }
+        .body-underline{
+          color:inherit !important;
+          text-decoration:underline !important;
+          text-decoration-color:currentColor !important;
+          text-decoration-thickness:1px !important;
+        }
+      }
+
+      @media screen and (max-width:480px){
+        .roles{
+          font-size:11px !important;
+          line-height:16px !important;
+          letter-spacing:0.18px !important;
+        }
+        .umwelt-p1,
+        .umwelt-p2{
+          font-size:10px !important;
+          line-height:16px !important;
+        }
+        .cv-button{
+          font-size:10px !important;
+          line-height:18px !important;
+        }
+      }
+
+      @media screen and (max-width:360px){
+        .roles{
+          font-size:10px !important;
+          line-height:15px !important;
+          letter-spacing:0.15px !important;
+        }
+        .cv-button{
+          font-size:9px !important;
+          line-height:16px !important;
+        }
+      }
+
+      @media screen and (max-width:280px){
+        .roles{
+          font-size:9px !important;
+          line-height:14px !important;
+          letter-spacing:0.12px !important;
+        }
+        .umwelt-p1,
+        .umwelt-p2{
+          font-size:9px !important;
+          line-height:15px !important;
+        }
+        .cv-button{
+          font-size:8px !important;
+          line-height:14px !important;
+        }
+      }
+    </style>
+
+    <!--[if mso]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <style type="text/css">
+      body, table, td, div, p, a { font-family: Arial, sans-serif !important; line-height: 100% !important; }
+    </style>
+    <![endif]-->
+
+    <base target="_blank">
+  </head>
+
+  <body style="margin:0;padding:0;background-color:#E8E3DE;background-color:rgba(232,227,222,1);background:#E8E3DE;">
+
+    <!-- preheader -->
+    <div style="display:none;font-size:1px;line-height:1px;color:transparent;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+      Preview: Visum- & Versicherungs– Anfrage
+    </div>
+    <div class="body-root">
+    <!--[if mso]>
+    <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+      <v:fill type="tile" color="#E8E3DE"/>
+    </v:background>
+    <![endif]-->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="dm-page" style="border:0;border-collapse:collapse;margin:0;padding:0;background-color:#E8E3DE;background-color:rgba(232,227,222,1);background-image:linear-gradient(180deg, rgba(232,227,222,1) 0%, rgba(245,240,235,1) 100%);">
+    <tr>
+      <td align="center" style="padding:28px 12px;">
+        <!--[if gte mso 9]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" fill="t" stroke="f" arcsize="6%" style="width:640px;height:100%;mso-fit-shape-to-text:true;">
+          <v:fill type="gradient" angle="180" color="#FAF6F1" color2="#EDE8E3" focus="100%"/>
+          <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:true;">
+        <![endif]-->
+        <table role="presentation" width="640" cellpadding="0" cellspacing="0" bgcolor="#F7F2EC" class="outer dm-outer" style="width:640px;max-width:100%;border-collapse:collapse;background-color:#F7F2EC;background-color:rgba(247,242,236,1);background-image:linear-gradient(180deg, rgba(250,246,241,1) 0%, rgba(237,232,227,1) 100%);border-radius:20px;overflow:hidden;">
+          <tr><td style="padding:0 28px;"><div style="height:28px;line-height:28px;font-size:0;">&nbsp;</div></td></tr>
+          <tr>
+            <td style="padding:0 28px 0 28px;">
+              <div class="light-mode-image">
+                <img src="https://ilghar.github.io/email-assets/headers/cloud-440.png" width="612" height="273" alt="Header-Photo-Cloud" style="display:block;width:612px;max-width:612px;height:auto;border:0;border-top-left-radius:18px;border-top-right-radius:18px;overflow:hidden;opacity:0.88;"/>
+              </div>
+              <div class="dark-mode-image" style="display:none;">
+                <img src="https://ilghar.github.io/email-assets/headers/cloud-440.png" width="612" height="273" alt="Header-Photo-Cloud" style="display:block;width:612px;max-width:612px;height:auto;border:0;border-top-left-radius:18px;border-top-right-radius:18px;overflow:hidden;opacity:0.88;"/>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 28px 0 28px;">
+              <!-- Section: Greeting -->
+              <div style="font:600 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#AA9EB1;color:rgba(170,158,177,1);margin:0 0 12px 0;">Sehr geehrte Frau Eliana Salto,</div>
+              <div class="body-text" style="font:400 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#51585E;color:rgba(81,88,94,1);">
+                <p style="margin:0 0 12px 0;">Mein Name ist Ilgar Dadgostari. Ich habe Ihre Kontaktdaten über Frau Rechtsanwältin <i>Mercedes Hervás Megía</i> erhalten, die mich aus Zeitgründen an Sie verwiesen hat. Sie lässt Sie herzlich grüßen.</p>
+                <p style="margin:0 0 12px 0;">Ich wende mich an Sie, da sich meine aktuelle <span class="body-emphasis">Aufenthalts- und Versicherungssituation</span> in Berlin als dringend und komplex gestaltet – ich benötige daher Ihre fachliche Unterstützung.</p>
+                <p style="margin:0 0 12px 0;">Ich habe im April 2024 meinen <b>Masterabschluss</b> an der <i>Kunsthochschule Berlin-Weißensee</i> abgeschlossen und erhielt anschließend ein 18-monatiges <i>Arbeitssuchende-Visum</i>, das am <b>24.10.2025</b> endet.</p>
+                <p style="margin:0 0 12px 0;">In dieser Zeit habe ich intensiv nach einer Arbeitsstelle gesucht und über 200 Bewerbungen verschickt – bislang ohne Erfolg. Inzwischen habe ich meine Unterlagen professioneller überarbeitet und bin überzeugt, dass ich in den kommenden Monaten sehr gute Chancen auf eine Anstellung habe.</p>
+                <p style="margin:0;">Meine <i>bisherige</i> private Versicherung (<span class="body-underline">für ausländische Gäste</span>) endete am 30.09.2025. Eine Verlängerung war wegen der gesetzlichen 5-Jahres-Grenze <span class="body-underline">nicht möglich</span>! Mehrere Versicherungsanbieter meinen, dass ein neuer Vertrag erst mit einer Aufenthaltserlaubnis von mind. 6–18 Monaten möglich sei (Absagen liegen vor).</p>
+                <p style="margin:12px 0 0 0;">Ich befinde mich daher aktuell ohne Versicherungsschutz und weiß nicht, wie ich meinen Antrag auf Verlängerung oder Statusänderung korrekt gestalten soll. Bislang habe ich alle meine Visum-Angelegenheiten selbst erledigt, doch diesmal benötige ich professionelle Begleitung.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:16px 28px 0 28px;font-size:0;line-height:0;">
+              <img src="https://ilghar.github.io/email-assets/signatures/devider-kette-1280-purple.png" width="612" height="8" alt="Divider Violet" style="display:block;width:612px;max-width:612px;height:auto;border:0;"/>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:12px 28px 0 28px;">
+              <!-- Section: Highlights -->
+              <div class="section-title" style="font-family:Roboto,Arial,'Segoe UI',Helvetica,sans-serif;font-weight:600;font-size:17px;line-height:24px;color:#E0A1B5;color:rgba(224,161,181,1);margin:0 0 6px 0;">Unterstützende Punkte</div>
+              <div class="bullet-container" style="margin-left:-4px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;color:#51585E;color:rgba(81,88,94,1);"><span class="bullet-title" style="color:#745A7A;color:rgba(116,90,122,1);"><b>Freiberufliche Tätigkeit:</b></span> Anfrage für kuratorische Tätigkeit + Anfrage als Produkt-Designer:in beim <i>HAW Design-Studio</i></td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;color:#51585E;color:rgba(81,88,94,1);"><span class="bullet-title" style="color:#745A7A;color:rgba(116,90,122,1);"><b>Berufliche Weiterbildung:</b></span> <i>AI-Assisted-Analytics</i> (Cyber-Security) — Zertifikate vorhanden</td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;color:#51585E;color:rgba(81,88,94,1);"><span class="bullet-title" style="color:#745A7A;color:rgba(116,90,122,1);"><b>Sprachkenntnisse:</b></span> Deutsch <b>C1–C2</b>; zusätzlich Feb. 2025 <b>TOEFL</b> &amp; <b>GRE</b> erfolgreich abgeschlossen</td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;color:#51585E;color:rgba(81,88,94,1);"><span class="bullet-title" style="color:#745A7A;color:rgba(116,90,122,1);"><b>Finanzierungsquelle:</b></span> Ersparnisse &amp; Unterstützung meines Bruders (Verpflichtungserklärung möglich)</td>
+                  </tr>
+                  <tr>
+                    <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                    <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 0 12px;color:#51585E;color:rgba(81,88,94,1);"><span class="bullet-title" style="color:#745A7A;color:rgba(116,90,122,1);"><b>Kulturelles Engagement:</b></span> Gemeinnütziges Kollektiv; zwei Musikfestivals in Sachsen (~700 Gäste, ehrenamtlich)</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="body-text" style="font:400 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#51585E;color:rgba(81,88,94,1);"><p style="margin:12px 0 12px 0;">Ich kann Ihnen gerne alle relevanten Unterlagen (<span class="body-underline">Bewerbungsübersicht, Finanzierungsnachweis, Verträge u. a.</span>) zur Verfügung stellen.</p></div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 28px 0 28px;font-size:0;line-height:0;">
+              <img src="https://ilghar.github.io/email-assets/signatures/devider-kette-1280-purple2.png" width="612" height="8" alt="Zierlinie · Violett" style="display:block;width:612px;max-width:612px;height:auto;border:0;"/>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:12px 28px 0 28px;">
+              <!-- Section: Questions -->
+              <div class="body-text" style="font:400 16px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#51585E;color:rgba(81,88,94,1);">
+                <p style="margin:0 0 12px 0;">Ich wäre Ihnen dankbar, wenn Sie mir mitteilen könnten:</p>
+                <div class="bullet-container" style="margin-left:-4px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tr>
+                      <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                      <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;color:#51585E;color:rgba(81,88,94,1);">ob und wie Sie mich vertreten können,</td>
+                    </tr>
+                    <tr>
+                      <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                      <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 6px 12px;color:#51585E;color:rgba(81,88,94,1);">mit welchen ungefähren Kosten ich rechnen sollte und</td>
+                    </tr>
+                    <tr>
+                      <td width="24" valign="top"><table role="presentation" width="24" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;"><tr><td class="bullet-circle" align="right" valign="middle" style="width:24px;height:24px;line-height:24px;font-family:Roboto,Arial,sans-serif;font-size:17px;font-weight:600;color:#E69CB0;color:rgba(230,156,176,1);">•</td></tr></table></td>
+                      <td class="bullet-body" style="font:400 15px/24px Roboto,Arial,sans-serif;padding:0 0 0 12px;color:#51585E;color:rgba(81,88,94,1);">welche weiteren Unterlagen ich vorbereiten soll, um den Antrag zu stärken.</td>
+                    </tr>
+                  </table>
+                </div>
+                <p style="margin:12px 0 0 0;">Für Ihre Zeit und Unterstützung danke ich Ihnen herzlich im Voraus.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px 28px 0 28px;">
+              <div style="font:400 15px/24px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#6B5A76;color:rgba(107,90,118,1);margin:0 0 20px 0;">Mit freundlichen Grüßen</div>
+              <img src="https://ilghar.github.io/email-assets/signatures/ilghar-signature-600-purple.png" width="230" height="40" alt="Hand-signature: Ilgar Dadgostari" style="display:block;border:0;width:2.4in;height:auto;margin:0 0 20px 0;opacity:0.88"/>
+              <div class="roles" style="font:500 13px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#745A7A;color:rgba(116,90,122,1);margin:0 0 16px 0;">
+                <span>Product&nbsp;Designer</span>
+                <span class="role-divider" style="color:#E69CB0;color:rgba(230,156,176,1);font-weight:700;">|</span>
+                <span>AI-SOC&nbsp;Analyst</span>
+                <span class="role-divider" style="color:#E69CB0;color:rgba(230,156,176,1);font-weight:700;">|</span>
+                <span>Curator</span>
+                <span class="role-divider" style="color:#E69CB0;color:rgba(230,156,176,1);font-weight:700;">|</span>
+                <span>Sculptor</span>
+                <span class="role-divider" style="color:#E69CB0;color:rgba(230,156,176,1);font-weight:700;">|</span>
+                <span>Spatial&nbsp;Strategist</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 28px 0 28px;">
+              <!--[if gte mso 9]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" fill="t" stroke="f" arcsize="10%" style="width:584px;height:100%;mso-fit-shape-to-text:true;">
+                <v:fill type="gradient" angle="180" color="#E1DCD7" color2="#F0EBE6" focus="100%"/>
+                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:true;">
+              <![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="panel contact-panel" style="border-collapse:collapse;background-color:#D8D4CF;background-color:rgba(216,212,207,1);background-image:linear-gradient(180deg, rgba(225,220,215,1) 0%, rgba(240,235,230,1) 100%);border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:0;border-bottom-right-radius:0;overflow:hidden;">
+                <tr>
+                  <td style="padding:12px 20px 0 20px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                      <tr>
+                        <td class="contact-text" style="font:400 13px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F;color:rgba(133,106,143,1);padding:0 20px 0 0;white-space:nowrap;vertical-align:baseline;">
+                          <img src="https://ilghar.github.io/email-assets/icons/phone-number-64.png" width="18" height="18" alt="Telefon" style="display:inline-block;border:0;vertical-align:-5px;margin-right:8px;"/>
+                          <a href="tel:+4915226996367" class="contact-phone" style="text-decoration:none !important;-webkit-text-size-adjust:100% !important;-ms-text-size-adjust:100% !important;text-size-adjust:100% !important;">+49 (0)1522 699 63 67</a>
+                        </td>
+                        <td class="contact-text" style="font:400 13px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F;color:rgba(133,106,143,1);padding:0 20px 0 12px;white-space:nowrap;vertical-align:baseline;">
+                          <img src="https://ilghar.github.io/email-assets/icons/location-pin-40.png" width="12" height="18" alt="Based in" style="display:inline-block;border:0;vertical-align:-4px;margin-right:8px;"/>
+                          Berlin
+                        </td>
+                        <td width="100%" style="padding:0;margin:0;font-size:0;line-height:0;"> </td>
+                        <td align="right" style="padding:0 0 0 20px;white-space:nowrap;text-align:right;vertical-align:baseline;">
+                          <span style="display:inline-block;white-space:nowrap;font-size:0;line-height:0;vertical-align:baseline;">
+                            <span class="cv-text" style="display:inline-block;height:20px;line-height:20px;vertical-align:baseline;font:400 14px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F;color:rgba(133,106,143,1);">
+                              Download&ensp;<span>CV</span>
+                            </span>
+                            <span style="display:inline-block;width:12px;height:20px;vertical-align:middle;">&#8203;</span>
+                            <a href="https://ilghar.github.io/email-assets/CV/Ilghar-Dadgostari_CV-DE.pdf" class="cv-button" style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;text-decoration:none;vertical-align:+1.4px;font:520 11.4px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F !important;color:rgba(133,106,143,1) !important;border:1.4px solid #856A8F;border:1.4px solid rgba(133,106,143,1);border-radius:6px;background:#F5F0EB;background:rgba(245,240,235,1);">DE</a>
+                            <span style="display:inline-block;width:12px;height:20px;vertical-align:baseline;">&#8203;</span>
+                            <a href="https://ilghar.github.io/email-assets/CV/Ilghar-Dadgostari_CV-EN.pdf" class="cv-button" style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;text-decoration:none;vertical-align:+1.4px;font:520 11.4px/20px Roboto,Arial,'Segoe UI',Helvetica,sans-serif;color:#856A8F !important;color:rgba(133,106,143,1) !important;border:1.4px solid #856A8F;border:1.4px solid rgba(133,106,143,1);border-radius:6px;background:#F5F0EB;background:rgba(245,240,235,1);">EN</a>
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td style="padding:0 20px;"><div style="height:60px;line-height:60px;font-size:0;"> </div></td></tr>
+                <tr>
+                  <td align="center" style="padding:0 20px 20px 20px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 auto;">
+                      <tr>
+                        <td style="padding:0 36px 0 0;"><a href="https://www.linkedin.com/in/ilqardesign/"><img src="https://ilghar.github.io/email-assets/icons/linkedin-96.png" width="20" height="20" alt="LinkedIn" style="display:block;border:0;"/></a></td>
+                        <td style="padding:0 36px 0 0;"><a href="https://vimeo.com/user71975820"><img src="https://ilghar.github.io/email-assets/icons/vimeo-96.png" width="20" height="20" alt="Vimeo" style="display:block;border:0;"/></a></td>
+                        <td style="padding:0 36px 0 0;"><a href="https://www.instagram.com/cypselae_vayu/"><img src="https://ilghar.github.io/email-assets/icons/instagram-96.png" width="20" height="20" alt="Instagram" style="display:block;border:0;"/></a></td>
+                        <td style="padding:0 36px 0 0;"><a href="https://wa.me/+41799027733"><img src="https://ilghar.github.io/email-assets/icons/whatsapp-96.png" width="20" height="20" alt="WhatsApp" style="display:block;border:0;"/></a></td>
+                        <td><a href="https://t.me/oiliooil"><img src="https://ilghar.github.io/email-assets/icons/telegram-96.png" width="20" height="20" alt="Telegram" style="display:block;border:0;"/></a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]>
+                </v:textbox>
+              </v:roundrect>
+              <![endif]-->
+            </td>
+          </tr>
+          <tr><td style="padding:0 24px;"><div style="height:24px;line-height:24px;font-size:0;">&nbsp;</div></td></tr>
+          <tr>
+            <td style="padding:0 28px;">
+              <!--[if gte mso 9]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" fill="t" stroke="f" arcsize="10%" style="width:584px;height:100%;mso-fit-shape-to-text:true;">
+                <v:fill type="gradient" angle="180" color="#F0EBE6" color2="#E1DCD7" focus="100%"/>
+                <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:true;">
+              <![endif]-->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="panel umwelt-panel" style="border-collapse:collapse;background-color:rgba(240,235,230,0.98);background-image:linear-gradient(180deg, rgba(240,235,230,0.98) 0%, rgba(225,220,215,0.98) 100%);border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:16px;border-bottom-right-radius:16px;overflow:hidden;">
+                <tr>
+                  <td style="padding:16px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                      <tr>
+                        <td valign="middle" style="padding:0;"><img src="https://ilghar.github.io/email-assets/footers/nature-note-288.png" width="72" height="108" alt="Bamboo Trees" style="display:block;border:0;width:72px;max-width:72px;height:auto;"/></td>
+                        <td valign="middle" style="padding:0 0 0 20px;">
+                          <div class="umwelt-p1" style="font-family:Roboto,Arial,'Segoe UI',Helvetica,sans-serif;font-weight:200;font-size:11px;line-height:18px;color:#8F7EA0;color:rgba(143,126,160,1);margin:0 0 12px 0;">The contents of this email and any attachments are confidential, and intended for the named recipient(s) only. If you have received this email by mistake, please avoid disclosing the contents to others or make copies thereof.</div>
+                          <div class="umwelt-p2" style="font-family:Roboto,Arial,'Segoe UI',Helvetica,sans-serif;font-weight:400;font-size:11px;line-height:18px;color:#E0A1B5;color:rgba(224,161,181,1);margin:8px 0 0 0;">Please consider the environment before printing this email.</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--[if gte mso 9]>
+                </v:textbox>
+              </v:roundrect>
+              <![endif]-->
+            </td>
+          </tr>
+          <tr><td style="padding:0 28px;"><div style="height:28px;line-height:28px;font-size:0;">&nbsp;</div></td></tr>
+        </table>
+        <!--[if gte mso 9]>
+          </v:textbox>
+        </v:roundrect>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+  </div>
+</body>
+</html>

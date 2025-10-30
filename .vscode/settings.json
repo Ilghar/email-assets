@@ -4,26 +4,27 @@
     "workbench.editor.openSideBySideDirection": "right",
     "workbench.editor.enablePreview": false,
     "workbench.editor.doubleClickTabToToggleEditorWidths": false,
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
     "editor.mouseWheelZoom": false,
     "workbench.localHistory.enabled": true,
     "workbench.localHistory.days": 120,
     "workbench.localHistory.maxFileEntries": 50,
     "workbench.editor.autoLockGroups": {
-        "default": true,
-        "workbench.editorinputs.searchEditorInput": true,
-        "notebookOutputEditor": true,
-        "jupyter-notebook": true,
-        "repl": true,
-        "workbench.editors.gettingStartedInput": true,
-        "imagePreview.previewEditor": true,
-        "vscode.videoPreview": true,
-        "vscode.audioPreview": true,
-        "jsProfileVisualizer.cpuprofile.table": true,
-        "jsProfileVisualizer.heapsnapshot.table": true,
-        "jsProfileVisualizer.heapprofile.table": true,
-        "workbench.input.interactive": true,
-        "mainThreadWebview-markdown.preview": true
+        "default": false,
+        "workbench.editorinputs.searchEditorInput": false,
+        "notebookOutputEditor": false,
+        "jupyter-notebook": false,
+        "repl": false,
+        "workbench.editors.gettingStartedInput": false,
+        "imagePreview.previewEditor": false,
+        "vscode.videoPreview": false,
+        "vscode.audioPreview": false,
+        "jsProfileVisualizer.cpuprofile.table": false,
+        "jsProfileVisualizer.heapsnapshot.table": false,
+        "jsProfileVisualizer.heapprofile.table": false,
+        "workbench.input.interactive": false,
+        "mainThreadWebview-markdown.preview": false
     },
     "window.zoomPerWindow": true,
     "window.zoomLevel": 1,
@@ -31,5 +32,18 @@
     "cSpell.words": [
         "Anfrage",
         "preheader"
-    ]
+    ],
+    "files.readonlyInclude": {},
+    "files.readonlyExclude": {
+        "**/*": true
+    },
+    "git.enabled": true,
+    "git.autofetch": false,
+    "git.autoStash": false,
+    "editor.formatOnSave": false,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true
+    }
 }
