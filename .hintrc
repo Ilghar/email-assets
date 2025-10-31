@@ -11,6 +11,8 @@
           "-ms-text-size-adjust"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off",
+    "meta-viewport": "off"
   }
 }
