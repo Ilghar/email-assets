@@ -3,6 +3,9 @@
     { "path": "." }
   ],
   "settings": {
-    "workbench.startupEditor": "readme"
+    "workbench.startupEditor": "readme",
+    "githubPullRequests.ignoredPullRequestBranches": [
+      "main"
+    ]
   }
 }
