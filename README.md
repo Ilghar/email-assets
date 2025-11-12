@@ -12,8 +12,9 @@ https://ilghar.github.io/email-assets/<folder>/<filename>
 ### Examples:
 - Icons: `https://ilghar.github.io/email-assets/icons/instagram-96.png`
 - Test Images: `https://ilghar.github.io/email-assets/img-test/email-96-test.png`
-- Headers: `https://ilghar.github.io/email-assets/headers/<your-file>`
-- Footers: `https://ilghar.github.io/email-assets/footers/<your-file>`
+- Headers: `https://ilghar.github.io/email-assets/headers/<filename.png>`
+- Footers: `https://ilghar.github.io/email-assets/footers/<filename.png>`
+- Any folder: `https://ilghar.github.io/email-assets/<folder-name>/<filename>`
 
 ## How to Add New Files
 
@@ -39,7 +40,7 @@ email-assets/
 ├── icons/             # Icon images
 ├── img-test/          # Test images
 ├── signatures/        # Email signature images
-└── oklch-picker/      # Color picker files
+└── oklch-picker/      # OKLCH color picker utility files
 ```
 
 ## Troubleshooting
