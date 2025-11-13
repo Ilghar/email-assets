@@ -12,8 +12,8 @@ https://ilghar.github.io/email-assets/<folder>/<filename>
 ### Examples:
 - Icons: `https://ilghar.github.io/email-assets/icons/instagram-96.png`
 - Test Images: `https://ilghar.github.io/email-assets/img-test/email-96-test.png`
-- Headers: `https://ilghar.github.io/email-assets/headers/<filename.png>`
-- Footers: `https://ilghar.github.io/email-assets/footers/<filename.png>`
+- Headers: `https://ilghar.github.io/email-assets/headers/<filename>`
+- Footers: `https://ilghar.github.io/email-assets/footers/<filename>`
 - Any folder: `https://ilghar.github.io/email-assets/<folder-name>/<filename>`
 
 ## How to Add New Files

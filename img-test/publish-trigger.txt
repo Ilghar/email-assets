@@ -1,1 +1,0 @@
-This file was added by GitHub Copilot Chat to trigger a GitHub Pages rebuild for files in img-test. Do not remove; it is safe and intended to ensure the images in img-test are published. — Ilghar
