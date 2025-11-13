@@ -26,7 +26,6 @@ https://ilghar.github.io/email-assets/<folder>/<filename>
 ## Important Notes
 
 - **GitHub Pages serves from the `main` branch** - ensure your files are committed to main
-- The `.nojekyll` file in the root directory disables Jekyll processing, allowing all file types to be served directly
 - Changes typically appear within 1-5 minutes after pushing to the main branch
 - All files are publicly accessible - do not upload sensitive content
 
@@ -34,13 +33,11 @@ https://ilghar.github.io/email-assets/<folder>/<filename>
 
 ```
 email-assets/
-├── .nojekyll          # Disables Jekyll processing
 ├── footers/           # Email footer images
 ├── headers/           # Email header images
 ├── icons/             # Icon images
 ├── img-test/          # Test images
 ├── signatures/        # Email signature images
-└── oklch-picker/      # OKLCH color picker utility files
 ```
 
 ## Troubleshooting
