@@ -40,6 +40,25 @@ email-assets/
 ├── signatures/        # Email signature images
 ```
 
+## Auto-sync helper
+
+Run the script from the repository root to commit and push changes automatically:
+
+```bash
+cd "/Users/ilghar_studio/Documents/GitHub/email-assets"
+./scripts/auto-sync.sh main
+```
+
+Set a custom interval (seconds) with `AUTO_SYNC_INTERVAL`:
+
+```bash
+cd "/Users/ilghar_studio/Documents/GitHub/email-assets"
+AUTO_SYNC_INTERVAL=120 ./scripts/auto-sync.sh main
+```
+
+The script fetches, rebases onto `origin/main`, commits any local modifications, and pushes them on the defined cadence.
+
+
 ## Troubleshooting
 
 If your files are not accessible after uploading:
@@ -50,3 +69,4 @@ If your files are not accessible after uploading:
 4. **Clear browser cache**: Your browser might be caching old content
 
 For any issues, check the repository's GitHub Pages settings under Settings → Pages.
+
